@@ -19,7 +19,7 @@ async function validateGithubPullRequest(user, repository, number) {
   const res = await fetch(`https://api.github.com/repos/${user}/${repository}/pulls/${number}`);
   if (res.status !== 200) {
     throw new Error(`the Github PR #${number} on the ${user}/${repository} repository could not be fetched (${res.status} error)`);
-  };
+  }
 }
 
 /**
