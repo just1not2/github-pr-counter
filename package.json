@@ -5,9 +5,9 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "node -r dotenv/config index.js",
-    "test": "mocha --file test/*.test.js --timeout 5000",
-    "lint": "eslint *.js"
+    "start": "node -r dotenv/config src/index.js",
+    "test": "mocha --file src/test/*.test.js --timeout 5000",
+    "lint": "eslint src/*.js"
   },
   "repository": {
     "type": "git",
