@@ -12,11 +12,12 @@
  * @return {string} The value associated to the variable.
  */
 function getConfigurationKey(key, validateValue) {
-  if (typeof key === 'undefined') {
+  const value = process.env[key];
+  if (typeof value === 'undefined') {
     throw new Error(`input key "${key}" was not declared`);
   }
-  validateValue(process.env[key]);
-  return process.env[key];
+  validateValue(value);
+  return value;
 }
 
 /**
